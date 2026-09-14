@@ -23,6 +23,13 @@ app.get("/", (req, res) => {
 app.use("/auth", authRouter);
 app.use("/users", userRouter);
 
-connectDB();
+// Connect to MongoDB
+connectDB()
+    .then(() => {
+        console.log("Database ready");
+    })
+    .catch((error) => {
+        console.error("Database connection failed:", error.message);
+    });
 
 module.exports = app;

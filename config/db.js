@@ -1,3 +1,4 @@
+
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
@@ -13,7 +14,7 @@ const connectDB = async () => {
 
         console.log("MongoDB connected");
     } catch (error) {
-        console.error("MongoDB connection error:", error);
+        console.error("MongoDB connection error:", error.message);
         throw error;
     }
 };
