@@ -1,6 +1,7 @@
 const dns = require("dns");
 
-dns.setServers(["8.8.8.8", "1.1.1.1"]);const express = require("express");
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
+const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const userRouter = require("./routes/userRouter");
